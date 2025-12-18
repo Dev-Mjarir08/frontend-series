@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    transition: all 0.3s ease-in;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    height: 280px;
+    object-fit: cover;
+   
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+
+.align-items-center {
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-3 {
+    width: 25%;
+    padding: 10px;
+}
+
+header {
+    padding: 20px;
+    background: #e14444;
+}
+
+.nav-bar .logo {
+    font-size: 28px;
+    color: aliceblue;
+}
+
+.nav-bar nav ul li {
+    position: relative;
+}
+
+.nav-bar nav ul li a {
+    margin-right: 24px;
+    color: aliceblue;
+}
+.toggle-bar{
+    display: none;
+}
+.toggle-button{
+   color: #f1f1f1;
+   font-size: 20px;
+  display: none;
+}
+.dropdown {
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #8d6b6b;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    margin-top: 20px;
+    width: 150px;
+    text-align: center;
+    padding: 8px;
+
+}
+.dropdown li a {
+    display: block;
+    margin-top: 10px;
+}
+
+nav ul .nav-link:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+.card-wrapper{
+    background: #1147d1;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-wrapper:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+
+.card-img{
+    overflow: hidden;
+    height: 200px;
+}
+
+.card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card-img:hover img{
+    transform: scale(1.15);
+}
+
+.card-content{
+    padding: 16px;
+}
+
+.card-title{
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.card-desc{
+    font-size: 15px;
+    color: #f1f1f1;
+    line-height: 1.5;
+
+    
+    overflow: hidden;
+}
+
+
+.card-footer{
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price{
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffeb3b;
+}
+
+.card-footer button{
+    background: #cecbd9;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.card-footer button:hover{
+    background: #d51610;
+    color: #fff;
+}
