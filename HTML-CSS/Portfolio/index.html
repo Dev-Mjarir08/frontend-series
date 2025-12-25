@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarir - Fullstack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Fixed Navigation Bar -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md py-4 transition-all duration-300 shadow-sm">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="logo text-3xl font-bold">DEVxJARIR</div>
+            
+            <!-- Navigation Links -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-slate-700 hover:text-blue-600 transition-colors duration-300">Home</a>
+                <a href="#about" class="nav-link text-slate-700 hover:text-blue-600 transition-colors duration-300">About</a>
+                <a href="#skills" class="nav-link text-slate-700 hover:text-blue-600 transition-colors duration-300">Skills</a>
+                <a href="#projects" class="nav-link text-slate-700 hover:text-blue-600 transition-colors duration-300">Projects</a>
+                <a href="#education" class="nav-link text-slate-700 hover:text-blue-600 transition-colors duration-300">Education</a>
+                <a href="#contact" class="nav-link text-slate-700 hover:text-blue-600 transition-colors duration-300">Contact</a>
+                <a href="https://github.com/Dev-Mjarir08" target="_blank" class="flex items-center text-slate-700 hover:text-blue-600 transition-colors duration-300">
+                    <i class="fab fa-github mr-2"></i> GitHub
+                </a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-slate-700">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white/95 backdrop-blur-md px-6 py-4 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="nav-link text-slate-700 hover:text-blue-600 transition-colors duration-300">Home</a>
+                <a href="#about" class="nav-link text-slate-700 hover:text-blue-600 transition-colors duration-300">About</a>
+                <a href="#skills" class="nav-link text-slate-700 hover:text-blue-600 transition-colors duration-300">Skills</a>
+                <a href="#projects" class="nav-link text-slate-700 hover:text-blue-600 transition-colors duration-300">Projects</a>
+                <a href="#education" class="nav-link text-slate-700 hover:text-blue-600 transition-colors duration-300">Education</a>
+                <a href="#contact" class="nav-link text-slate-700 hover:text-blue-600 transition-colors duration-300">Contact</a>
+                <a href="https://github.com" target="_blank" class="nav-link text-slate-700 hover:text-blue-600 transition-colors duration-300 flex items-center">
+                    <i class="fab fa-github mr-2"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Particles -->
+    <section id="home" class="min-h-screen flex items-center relative overflow-hidden pt-20">
+        <!-- Particles Background -->
+        <div id="particles-js"></div>
+        
+        <div class="container mx-auto px-6 py-12 relative z-10">
+            <div class="flex flex-col items-center text-center">
+                <!-- Hero Content -->
+                <div class="max-w-3xl">
+                    <div class="fade-up">
+                        <h3 class="text-blue-500 text-2xl font-medium mb-4">Hello, I'm</h3>
+                        <h1 class="text-6xl md:text-7xl font-bold mb-6 text-slate-800">Jarir Multani</h1>
+                        
+                        <!-- Typewriter Text -->
+                        <div class="h-12 md:h-16 mb-8">
+                            <h2 id="typewriter" class="text-3xl md:text-4xl font-bold text-slate-700"></h2>
+                        </div>
+                        
+                        <p class="text-slate-600 text-lg mb-10 max-w-2xl mx-auto">
+                            I build modern, responsive web applications using cutting-edge technologies. 
+                            Passionate about creating efficient, scalable solutions with great user experiences.
+                        </p>
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
+                                <i class="fas fa-code mr-2"></i> View Projects
+                            </a>
+                            <a href="#contact" class="border border-blue-500 hover:bg-blue-50 text-blue-600 hover:text-blue-700 px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg">
+                                <i class="fas fa-paper-plane mr-2"></i> Contact Me
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Scroll Indicator -->
+                <div class="mt-20 fade-up">
+                    <a href="#about" class="flex flex-col items-center text-slate-500 hover:text-blue-500 transition-colors duration-300">
+                        <span class="mb-2">Scroll Down</span>
+                        <i class="fas fa-chevron-down animate-bounce"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-4 fade-down text-slate-800">About Me</h2>
+            <div class="w-24 h-1 bg-blue-500 mx-auto mb-12"></div>
+            
+            <div class="max-w-4xl mx-auto fade-up">
+                <div class="section-bg p-8 md:p-12 shadow-lg">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/3 mb-8 md:mb-0 md:mr-12">
+                            <div class="relative">
+                                <div class="w-48 h-48 md:w-64 md:h-64 flex items-center justify-center mx-auto ">
+                                    <div class="w-40 h-40 md:w-56 md:h-56 flex items-center justify-center">
+                                        <img src="/assets/media/images/image.png " class="rounded-full" alt="">
+                                    </div>
+                                </div>
+                                <div class="absolute -bottom-2 -right-2 w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center shadow-lg">
+                                    <i class="fas fa-code text-white text-2xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="md:w-2/3">
+                            <h3 class="text-2xl font-bold mb-6 text-slate-800">Fullstack Developer</h3>
+                            <p class="text-slate-600 text-lg mb-6">
+                                I'm a passionate Fullstack Developer with expertise in modern JavaScript frameworks and libraries. 
+                                I love building dynamic, responsive web applications that provide great user experiences.
+                            </p>
+                            <p class="text-slate-600 text-lg mb-6">
+                                With a strong foundation in both frontend and backend technologies, I enjoy working on projects 
+                                from conception to deployment, ensuring clean code and optimal performance.
+                            </p>
+                            <p class="text-slate-600 text-lg">
+                                I completed my higher secondary education in 2023 and have since been dedicated to mastering 
+                                web development technologies. I'm always eager to learn new tools and frameworks to stay 
+                                current in this fast-evolving field.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 section-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-4 fade-down text-slate-800">My Expertise</h2>
+            <div class="w-24 h-1 bg-blue-500 mx-auto mb-12"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- html Card -->
+                <div class="bg-white rounded-xl p-6 skill-card fade-right">
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fa-brands fa-html5 text-amber-500 text-2xl"></i>
+                             
+                            </div>
+                            <h3 class="text-2xl font-bold ">HTML</h3>
+                        </div>
+                        <span class="text-blue-600 font-bold text-xl">80%</span>
+                    </div>
+                    <p class="text-slate-600 mb-4">
+                       Building well-structured and accessible user interfaces using semantic HTML, focusing on clean markup, proper layout hierarchy, and SEO-friendly structure for modern web applications.
+                    </p>
+                    <div class="progress-container">
+                        <div class="progress-bar react-progress"></div>
+                    </div>
+                </div>
+                <!-- JavaScript Card -->
+                <div class="bg-white rounded-xl p-6 skill-card fade-left">
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fab fa-js text-yellow-500 text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-800">JavaScript</h3>
+                        </div>
+                        <span class="text-blue-600 font-bold text-xl">85%</span>
+                    </div>
+                    <p class="text-slate-600 mb-4">
+                        Advanced knowledge of modern JavaScript (ES6+), including asynchronous programming, 
+                        DOM manipulation, and functional programming concepts.
+                    </p>
+                    <div class="progress-container">
+                        <div class="progress-bar js-progress"></div>
+                    </div>
+                </div>
+                
+                
+                
+                <!-- Bootstarp Card -->
+                <div class="bg-white rounded-xl p-6 skill-card fade-left">
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fa-brands fa-bootstrap text-purple-800 text-2xl"></i>
+                             
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-800">Bootstarp</h3>
+                        </div>
+                        <span class="text-blue-600 font-bold  text-xl">65%</span>
+                    </div>
+                    <p class="text-slate-600 mb-4">
+                     Creating responsive and mobile-first user interfaces using Bootstrap’s grid system, components, and utility classes to build consistent and scalable layouts efficiently.
+                    </p>
+                    <div class="progress-container">
+                        <div class="progress-bar node-progress"></div>
+                    </div>
+                </div>
+                
+                <!-- DSA C++ Card -->
+                <div class="bg-white rounded-xl p-6 skill-card fade-right">
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-code text-purple-500 text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-800">DSA</h3>
+                        </div>
+                        <span class="text-blue-600 font-bold text-xl">84%</span>
+                    </div>
+                    <p class="text-slate-600 mb-4">
+                        Strong foundation in Data Structures and Algorithms using C++. 
+                        Problem-solving skills with efficient algorithm implementation.
+                    </p>
+                    <div class="progress-container">
+                        <div class="progress-bar dsa-progress"></div>
+                    </div>
+                </div>
+                
+                <!-- CSS Card -->
+                <div class="bg-white rounded-xl p-6 skill-card fade-left">
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fab fa-css3-alt text-blue-500 text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-800">CSS</h3>
+                        </div>
+                        <span class="text-blue-600 font-bold text-xl">94%</span>
+                    </div>
+                    <p class="text-slate-600 mb-4">
+                        Expert in CSS3, Tailwind CSS, and responsive design principles. 
+                        Tailwind CSS utility classes, enabling rapid development, precise styling control, and responsive design implementation
+                    </p>
+                    <div class="progress-container">
+                        <div class="progress-bar css-progress"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-4 fade-down text-slate-800">My Projects</h2>
+            <div class="w-24 h-1 bg-blue-500 mx-auto mb-12"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-xl p-6 relative fade-up">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="fa-solid fa-address-card text-blue-500 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Frontend Website</h3>
+                            <p class="text-slate-600 text-sm mb-4">Fullstack Portfolio Application</p>
+                        </div>
+                        <a href="https://github.com/Dev-Mjarir08/Pr-portfolio-jarir-9302" target="_blank" class="text-slate-400 hover:text-blue-500">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-slate-600 mb-6">
+                        A modern and responsive personal portfolio website designed to showcase my skills, projects, and experience. Built with a clean UI, smooth navigation, and well-structured sections to create a professional online presence.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">HTML</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">CSS</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Media Query</span>
+                    </div>
+                    <a href="https://github.com/Dev-Mjarir08/Pr-portfolio-jarir-9302" target="_blank" class="text-blue-500 hover:text-blue-600 font-medium flex items-center">
+                        View Repository <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-xl p-6 relative fade-up">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="fas fa-tasks text-purple-500 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Frontend Website</h3>
+                            <p class="text-slate-600 text-sm mb-4">E-Blog Website</p>
+                        
+                        </div>
+                        <a href="https://github.com/Dev-Mjarir08/E-blog-website" target="_blank" class="text-slate-400 hover:text-blue-500">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-slate-600 mb-6">
+                       A responsive blog website focused on clean layout, typography, and user-friendly design. The project demonstrates structured content presentation and responsive behavior across different screen sizes.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-sm">HTML</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-sm">CSS</span>
+                        <span class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm">Bootstarp</span>
+                    </div>
+                    <a href="https://github.com/Dev-Mjarir08/E-blog-website" target="_blank" class="text-blue-500 hover:text-blue-600 font-medium flex items-center">
+                        View Repository <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-xl p-6 relative fade-up">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="fas fa-robot text-green-500 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Weather API Application</h3>
+                            <p class="text-slate-600 text-sm mb-4">Real-World Web App</p>
+                        </div>
+                        <a href="https://github.com/Dev-Mjarir08/PR-8-Dynamic-Memory-Allocation" target="_blank" class="text-slate-400 hover:text-blue-500">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                    <p class="text-slate-600 mb-6">
+             Continuously enhancing my skills through structured training, hands-on practice, and real-world projects at Red and White Skill Education. Focused on strengthening core web development concepts, modern technologies, and industry-level best practices under professional guidance.</p>
+                        <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">JavaScript</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">HTML</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">CSS</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">REST API</span>
+                    </div>
+                    <a href="https://github.com/Dev-Mjarir08/PR-10-Weather-API" target="_blank" class="text-blue-500 hover:text-blue-600 font-medium flex items-center">
+                        View Repository <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 fade-up">
+                <a href="https://github.com/Dev-Mjarir08/PR-10-Weather-API" target="_blank" class="inline-flex items-center bg-slate-800 hover:bg-slate-900 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <i class="fab fa-github mr-3"></i> View All Projects on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 section-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-4 fade-down text-slate-800">Education</h2>
+            <div class="w-24 h-1 bg-blue-500 mx-auto mb-12"></div>
+            
+            <div class="max-w-3xl mx-auto fade-up">
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="flex items-start mb-8 pb-8 border-b border-slate-200">
+                        <div class="bg-blue-100 p-5 rounded-xl mr-6">
+                            <i class="fas fa-graduation-cap text-blue-500 text-3xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2 text-slate-800">Higher Secondary Education</h3>
+                            <p class="text-blue-500 text-lg mb-2 font-medium">Completed in 2023</p>
+                            <p class="text-slate-600">
+                                Successfully completed my higher secondary education with a focus on 
+                                science and mathematics, building a strong analytical foundation that 
+                                supports my problem-solving skills in software development.
+                            </p>
+                        </div>
+                    </div>
+                        <div class="max-w-3xl mx-auto fade-up">
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="flex items-start mb-8 pb-8 border-b border-slate-200">
+                        <div class="bg-blue-100 p-5 rounded-xl mr-6">
+                            <i class="fas fa-graduation-cap text-blue-500 text-3xl"></i>
+                        </div>
+                   <div>
+                            <h3 class="text-2xl font-bold mb-2 text-slate-800">Red & White Skill Education</h3>
+                            <p class="text-purple-500 text-lg mb-2 font-medium">Ongoing</p>
+                            <p class="text-slate-600">
+                              Continuously enhancing my skills through structured training, hands-on practice, and real-world projects at Red and White Skill Education. Focused on strengthening core web development concepts, modern technologies, and industry-level best practices under professional guidance.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-purple-100 p-5 rounded-xl mr-6">
+                            <i class="fas fa-laptop-code text-purple-500 text-3xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2 text-slate-800">Self-Taught Developer</h3>
+                            <p class="text-purple-500 text-lg mb-2 font-medium">Ongoing</p>
+                            <p class="text-slate-600">
+                                Continuously expanding my knowledge through online courses, documentation, 
+                                and building practical projects. Focused on mastering modern web technologies 
+                                and best practices in software development.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-4 fade-down text-slate-800">Get In Touch</h2>
+            <div class="w-24 h-1 bg-blue-500 mx-auto mb-12"></div>
+            
+            <div class="max-w-2xl mx-auto fade-up">
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <p class="text-slate-600 text-lg text-center mb-8">
+                        I'm currently open to new opportunities and collaborations. 
+                        Feel free to reach out if you'd like to work together or just say hello!
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                        <div class="bg-blue-50 rounded-lg p-6 text-center hover:bg-blue-100 transition-colors duration-300">
+                            <i class="fas fa-envelope text-blue-500 text-3xl mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-slate-800">Email</h3>
+                            <p class="text-slate-600">08mjarir@gmil.com</p>
+                        </div>
+                        
+                        <div class="bg-blue-50 rounded-lg p-6 text-center hover:bg-blue-100 transition-colors duration-300">
+                            <i class="fas fa-map-marker-alt text-blue-500 text-3xl mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2 text-slate-800">Location</h3>
+                            <p class="text-slate-600">Available for remote work worldwide</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-center space-x-6">
+                        <a href="https://github.com/Dev-Mjarir08/Pr-portfolio-jarir-9302" target="_blank" class="w-14 h-14 bg-slate-100 hover:bg-blue-500 rounded-full flex items-center justify-center transition-all duration-300 transform hover:-translate-y-2 shadow-md hover:shadow-lg">
+                            <i class="fab fa-github text-xl text-slate-700 hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-14 h-14 bg-slate-100 hover:bg-blue-400 rounded-full flex items-center justify-center transition-all duration-300 transform hover:-translate-y-2 shadow-md hover:shadow-lg">
+                            <i class="fab fa-twitter text-xl text-slate-700 hover:text-white"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jarir-multani-3b7483369/" class="w-14 h-14 bg-slate-100 hover:bg-blue-700 rounded-full flex items-center justify-center transition-all duration-300 transform hover:-translate-y-2 shadow-md hover:shadow-lg">
+                            <i class="fab fa-linkedin-in text-xl text-slate-700 hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-14 h-14 bg-slate-100 hover:bg-pink-500 rounded-full flex items-center justify-center transition-all duration-300 transform hover:-translate-y-2 shadow-md hover:shadow-lg">
+                            <i class="fab fa-instagram text-xl text-slate-700 hover:text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white py-10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="logo text-2xl font-bold mb-3">DEVxJARIR</div>
+                    <p class="text-slate-300">Fullstack & MERN Stack Developer</p>
+                </div>
+                
+                <div class="text-slate-300 text-center md:text-right">
+                    <p>&copy; 2023 Jarir. All rights reserved.</p>
+                    <p>Built with HTML, Tailwind CSS & JavaScript</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-14 h-14 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-all duration-300 opacity-0 transform translate-y-10 shadow-lg hover:shadow-xl z-40">
+        <i class="fas fa-arrow-up text-white text-xl"></i>
+    </button>
+
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
